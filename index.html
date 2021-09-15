@@ -3,11 +3,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>张一卓</title>
+    <title>外出申请</title>
     <style>
+        .divcss5 {
+            text-align: center;
+            width: 1279px;
+            vertical-align: middle;
+        }
+        
         #time {
             color: #fa7f0c;
-            width: 900px;
+            width: 1279px;
             height: 50px;
             margin: 10px auto;
             text-align: center;
@@ -46,7 +52,8 @@
                 h < 10 ? h = "0" + h : h;
                 //d<10? d="0"+d:d;
                 time.innerHTML = "距离返回时间还剩：" +
-                    h + " 时 " + m + " 分 " + s + " 秒 ";
+                    "0天  " +
+                    h + ":" + m + ":" + s;
 
             }
         }
@@ -55,12 +62,16 @@
 
 <body>
     <p>
-        <img src="ding.png" alt="Smiley face" width="958" height="693">
+        <img src="ding.png" alt="Smiley face" width="1279" height="748">
     </p>
     <div class="calendar">
-        <div id="time"></div>
+        <div>
+            <img src="sha.png" width="20" height="30" />
+            <div id="time"></div>
+        </div>
     </div>
-    <div align="center"><img src="ma.png" /></div>
+    <div class="divcss5"><img src="ma.png" /></div>
+
 </body>
 
 </html>
