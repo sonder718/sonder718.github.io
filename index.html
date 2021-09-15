@@ -8,7 +8,25 @@
         .divcss5 {
             text-align: center;
             width: 1279px;
+            height: 800px;
             vertical-align: middle;
+            /* transform: scale(1); */
+        }
+        
+        .methodT {
+            /* display: flex; */
+            justify-content: center;
+            vertical-align: middle;
+            text-align: center;
+            width: 1279px;
+            height: 100px;
+        }
+        
+        .imgcent {
+            text-align: center;
+            vertical-align: middle;
+            display: inline-block;
+            margin: 0 auto;
         }
         
         #time {
@@ -17,7 +35,7 @@
             height: 50px;
             margin: 10px auto;
             text-align: center;
-            font: 500 30px/60px "微软雅黑";
+            font: 500 40px/80px "微软雅黑";
         }
     </style>
     <script>
@@ -64,13 +82,16 @@
     <p>
         <img src="ding.png" alt="Smiley face" width="1279" height="748">
     </p>
-    <div class="calendar">
-        <div>
-            <img src="sha.png" width="20" height="30" />
-            <div id="time"></div>
+    <div class="methodT">
+        <div class="imgcent">
+            <img src="sha.png" width="80" height="100" />
         </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <nobr id="time">
     </div>
-    <div class="divcss5"><img src="ma.png" /></div>
+    <div class="divcss5">
+        <img src="ma.png" height="850" />
+    </div>
 
 </body>
 
