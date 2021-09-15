@@ -3,12 +3,65 @@
 
 <head>
     <meta charset="utf-8">
-    <title>张一卓</title>
+    <title>外出申请</title>
+    <style>
+        #time {
+            color: #fa7f0c;
+            width: 900px;
+            height: 50px;
+            margin: 10px auto;
+            text-align: center;
+            font: 500 20px/40px "微软雅黑";
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            //当前年月日ID
+            //倒计时ID
+            var time = document.getElementById("time");
+            //问候语ID
+            //获取现在的年月日小时
+            var fullTime = new Date();
+            var year = fullTime.getFullYear(); //年
+            var month = fullTime.getMonth(); //月
+            var date = fullTime.getDate(); //日
+            var hours = fullTime.getHours(); //小时
+            var dayArr = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+            //名言数组
+            var hlloarr = [
+                " ",
+            ];
+            //当前时间段默认的名言
+            var endTime = new Date(year, month, date, 23, 59, 59); //获取未来结束的时间
+            setInterval(fun, 1000); //开启定时器
+            function fun() {
+                var newTime = new Date(); //得到最新的时间
+                var ms = parseInt((endTime - newTime) / 1000); //得到毫秒，并取整
+                var s = parseInt(ms % 60); //秒
+                var m = parseInt((ms / 60) % 60); //分
+                var h = parseInt((ms / 3600) % 24); //小时
+                //var d = parseInt((ms / 3600) / 24);//天
+                s < 10 ? s = "0" + s : s;
+                m < 10 ? m = "0" + m : m;
+                h < 10 ? h = "0" + h : h;
+                //d<10? d="0"+d:d;
+                time.innerHTML = "距离返回时间还剩：" +
+                    h + " 时 " + m + " 分 " + s + " 秒 ";
+
+            }
+        }
+    </script>
 </head>
 
 <body>
     <p>
         <img src="ding.png" alt="Smiley face" width="958" height="693">
+    </p>
+    <div class="calendar">
+        <div id="time"></div>
+    </div>
+    <p>
+        <img src="ma.png" align="middle" width="958" height="693">
     </p>
 </body>
 
