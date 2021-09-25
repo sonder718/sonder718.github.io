@@ -67,6 +67,9 @@
            var hours = fullTime.getHours(); //小时
            var dayArr = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
            //名言数组
+           today.innerHTML = year+"-0"+(month+1)+'-'+date;
+           today1.innerHTML = year+"-0"+(month+1)+'-'+date+" 6:00";
+           today2.innerHTML = year+"-0"+(month+1)+'-'+date+" 23:59";
            var hlloarr = [
                " ",
            ];
@@ -84,9 +87,7 @@
                m < 10 ? m = "0" + m : m;
                h < 10 ? h = "0" + h : h;
                //d<10? d="0"+d:d;
-               today.innerHTML = year+"-"+month+'-'+date;
-               today1.innerHTML = year+"-"+month+'-'+date+" 6:00";
-               today2.innerHTML = year+"-"+month+'-'+date+" 23:59";
+               
 
            }
        }
