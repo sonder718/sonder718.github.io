@@ -37,60 +37,103 @@
     />
     <input type="hidden" id="_w_tusk" />
     <style>
-      #today 
-      {
-   }
-   #today1 
-      {
-   } 
-   #today2 
-      {
-   }
+      #today {
+      }
+      #today1 {
+      }
+      #today2 {
+      }
       #time {
-           color: rgb(255, 153, 24);
-       }
-       
-   </style><script>
-       window.onload = function() {
-           //当前年月日ID
-           //倒计时ID
-           var today = document.getElementById("today");
-           var today1 = document.getElementById("today1");
-           var today2 = document.getElementById("today2");
-    
-           //问候语ID
-           //获取现在的年月日小时
-           var fullTime = new Date();
-           var year = fullTime.getFullYear(); //年
-           var month = fullTime.getMonth(); //月
-           var date = fullTime.getDate(); //日
-           var hours = fullTime.getHours(); //小时
-           var dayArr = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
-           //名言数组
-           today.innerHTML = year+"-0"+(month+1)+'-'+date;
-           today1.innerHTML = year+"-0"+(month+1)+'-'+date+" 6:00";
-           today2.innerHTML = year+"-0"+(month+1)+'-'+date+" 23:59";
-           var hlloarr = [
-               " ",
-           ];
-           //当前时间段默认的名言
-           var endTime = new Date(year, month, date, 23, 59, 59); //获取未来结束的时间
-           setInterval(fun, 1000); //开启定时器
-           function fun() {
-               var newTime = new Date(); //得到最新的时间
-               var ms = parseInt((endTime - newTime) / 1000); //得到毫秒，并取整
-               var s = parseInt(ms % 60); //秒
-               var m = parseInt((ms / 60) % 60); //分
-               var h = parseInt((ms / 3600) % 24); //小时
-               //var d = parseInt((ms / 3600) / 24);//天
-               s < 10 ? s = "0" + s : s;
-               m < 10 ? m = "0" + m : m;
-               h < 10 ? h = "0" + h : h;
-               //d<10? d="0"+d:d;
-               
+        color: rgb(255, 153, 24);
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        //当前年月日ID
+        //倒计时ID
+        var today = document.getElementById("today");
+        var today1 = document.getElementById("today1");
+        var today2 = document.getElementById("today2");
 
-           }
-       }
+        //问候语ID
+        //获取现在的年月日小时
+        var fullTime = new Date();
+        var year = fullTime.getFullYear(); //年
+        var month = fullTime.getMonth(); //月
+        var date = fullTime.getDate(); //日
+        var hours = fullTime.getHours(); //小时
+        var dayArr = [
+          "星期日",
+          "星期一",
+          "星期二",
+          "星期三",
+          "星期四",
+          "星期五",
+          "星期六",
+        ];
+        month=month + 1;
+        if (month < 9) 
+        {
+          month=String(month);
+        }
+        if(date < 10)
+        {
+          date=String(date);
+          // date="0"+date;
+        }
+        // if (month < 9) 
+        // {
+        //   if (data < 10) {
+        //     today.innerHTML = year + "-0" + (month + 1) + "-0" + date;
+        //     today1.innerHTML =
+        //       year + "-0" + (month + 1) + "-0" + date + " 6:00";
+        //     today2.innerHTML =
+        //       year + "-0" + (month + 1) + "-0" + date + " 23:59";
+        //   } else {
+        //     today.innerHTML = year + "-0" + (month + 1) + "-" + date;
+        //     today1.innerHTML = year + "-0" + (month + 1) + "-" + date + " 6:00";
+        //     today2.innerHTML =
+        //       year + "-0" + (month + 1) + "-" + date + " 23:59";
+        //   }
+        // }
+        // else
+        // {
+        //   if (data < 10) {
+        //     today.innerHTML = year + "-" + (month + 1) + "-0" + date;
+        //     today1.innerHTML =
+        //       year + "-" + (month + 1) + "-0" + date + " 6:00";
+        //     today2.innerHTML =
+        //       year + "-" + (month + 1) + "-0" + date + " 23:59";
+        //   } else {
+        //     today.innerHTML = year + "-" + (month + 1) + "-" + date;
+        //     today1.innerHTML = year + "-" + (month + 1) + "-" + date + " 6:00";
+        //     today2.innerHTML =
+        //       year + "-" + (month + 1) + "-" + date + " 23:59";
+        //   }
+        // }
+        today.innerHTML = year + "-" + (month) + "-0" + date;
+        today1.innerHTML =
+          year + "-" + (month) + "-0" + date + " 6:00";
+        today2.innerHTML =
+          year + "-" + (month) + "-0" + date + " 23:59";
+
+        var hlloarr = [" "];
+        //当前时间段默认的名言
+        var endTime = new Date(year, month, date, 23, 59, 59); //获取未来结束的时间
+        setInterval(fun, 1000); //开启定时器
+        function fun() {
+          var newTime = new Date(); //得到最新的时间
+          var ms = parseInt((endTime - newTime) / 1000); //得到毫秒，并取整
+          var s = parseInt(ms % 60); //秒
+          var m = parseInt((ms / 60) % 60); //分
+          var h = parseInt((ms / 3600) % 24); //小时
+          //var d = parseInt((ms / 3600) / 24);//天
+          s < 10 ? (s = "0" + s) : s;
+          m < 10 ? (m = "0" + m) : m;
+          h < 10 ? (h = "0" + h) : h;
+          //d<10? d="0"+d:d;
+        }
+      };
     </script>
     <style type="text/css">
       /*!
@@ -8388,11 +8431,7 @@
                       临时出校二维码
                     </div>
                     <div class="wcsq-ld-content" style="display: none">
-                      <img
-                        alt=""
-                        src="ld1.png"
-                        class="wcsq-ld-img"
-                      />
+                      <img alt="" src="ld1.png" class="wcsq-ld-img" />
                       <div
                         class="wcsq-ld-text"
                         style="color: rgb(83, 199, 202)"
@@ -8401,11 +8440,7 @@
                       </div>
                     </div>
                     <div class="wcsq-ld-content" style="display: none">
-                      <img
-                        alt=""
-                        src="ld2.png"
-                        class="wcsq-ld-img"
-                      />
+                      <img alt="" src="ld2.png" class="wcsq-ld-img" />
                       <div
                         class="wcsq-ld-text"
                         style="color: rgb(255, 153, 24)"
@@ -8414,11 +8449,7 @@
                       </div>
                     </div>
                     <div class="wcsq-ld-content" style="">
-                      <img
-                        alt=""
-                        src="ld2.png"
-                        class="wcsq-ld-img"
-                      />
+                      <img alt="" src="ld2.png" class="wcsq-ld-img" />
                       <div
                         class="wcsq-ld-text"
                         style="color: rgb(255, 153, 24)"
@@ -8534,14 +8565,11 @@
                         <div class="mint-layout-container">
                           <div class="mint-layout-container">
                             <div class="mint-layout-container OPk1iu6ki3">
-                              <img
-                                src="rl.png"
-                                class="mint-image OPk1iu6ki5"
-                              />
+                              <img src="rl.png" class="mint-image OPk1iu6ki5" />
                               <div
                                 class="mint-text OPk1iu6ki6 mt-color-default"
                               >
-                              <nobr id="today"></nobr>
+                                <nobr id="today"></nobr>
                               </div>
                             </div>
                             <div
@@ -8560,7 +8588,7 @@
                               <div
                                 class="mint-text OPk1iu6kiie mt-color-default"
                               >
-                              <nobr id="today1"></nobr>                      
+                                <nobr id="today1"></nobr>
                               </div>
                             </div>
                             <div
@@ -8579,10 +8607,10 @@
                               <div
                                 class="mint-text OPk1iu6kiie mt-color-default"
                               >
-                              <nobr id="today2"></nobr>                      
+                                <nobr id="today2"></nobr>
                               </div>
                             </div>
-                            
+
                             <div
                               class="
                                 mint-layout-container
@@ -8684,10 +8712,7 @@
                         <div class="mint-layout-container">
                           <div class="mint-layout-container">
                             <div class="mint-layout-container OPk1iu6ki3">
-                              <img
-                                src="rl.png"
-                                class="mint-image OPk1iu6ki5"
-                              />
+                              <img src="rl.png" class="mint-image OPk1iu6ki5" />
                               <div
                                 class="mint-text OPk1iu6ki6 mt-color-default"
                               >
@@ -8833,10 +8858,7 @@
                         <div class="mint-layout-container">
                           <div class="mint-layout-container">
                             <div class="mint-layout-container OPk1iu6ki3">
-                              <img
-                                src="rl.png"
-                                class="mint-image OPk1iu6ki5"
-                              />
+                              <img src="rl.png" class="mint-image OPk1iu6ki5" />
                               <div
                                 class="mint-text OPk1iu6ki6 mt-color-default"
                               >
@@ -8982,10 +9004,7 @@
                         <div class="mint-layout-container">
                           <div class="mint-layout-container">
                             <div class="mint-layout-container OPk1iu6ki3">
-                              <img
-                                src="rl.png"
-                                class="mint-image OPk1iu6ki5"
-                              />
+                              <img src="rl.png" class="mint-image OPk1iu6ki5" />
                               <div
                                 class="mint-text OPk1iu6ki6 mt-color-default"
                               >
@@ -9131,10 +9150,7 @@
                         <div class="mint-layout-container">
                           <div class="mint-layout-container">
                             <div class="mint-layout-container OPk1iu6ki3">
-                              <img
-                                src="rl.png"
-                                class="mint-image OPk1iu6ki5"
-                              />
+                              <img src="rl.png" class="mint-image OPk1iu6ki5" />
                               <div
                                 class="mint-text OPk1iu6ki6 mt-color-default"
                               >
