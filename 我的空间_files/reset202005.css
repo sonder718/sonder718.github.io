@@ -1,0 +1,397 @@
+﻿html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,
+address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,
+var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-touch-callout: none; 
+	-webkit-text-size-adjust: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-overflow-scrolling:touch;
+	overflow-scrolling:touch;
+}
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:before,::before,:after,::after{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html,body { 
+	font-family:PingFang SC, "Microsoft YaHei", Arial, Helvetica, sans-serif;
+	color: #333; 
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight:normal;
+	font-size: 100%;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	display: block;
+}
+
+input,textarea,select,button {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	-webkit-appearance: none;
+	border-radius: 0;
+	font-family:PingFang SC, "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+a,a:link,a:visited,a:hover,a:active {
+	text-decoration: none;
+	color: #333;
+	-webkit-tap-highlight-color: transparent;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+ol,ul {
+	list-style: none;
+}
+img{
+	border:0px;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+input[type=search]::-webkit-search-cancel-button{
+	-webkit-appearance: none;
+}
+:-ms-input-placeholder{
+	color: #b5b8c2;
+}
+:-moz-placeholder {
+	color: #b5b8c2;
+}
+::-moz-placeholder {
+	color: #b5b8c2;
+}
+::-webkit-input-placeholder{
+	color: #b5b8c2;
+}
+::input-placeholder{
+    color:#b5b8c2;
+}
+
+hr {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	color: #000;
+	background-color: #000;
+	height: 1px
+}
+
+.Absolute-Center {
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.clear {
+	clear: both;
+	height: 0px;
+	font-size: 0px;
+	line-height: 0px;
+	overflow: hidden;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}
+
+/* IE 6/7 */
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+
+/*单行文本省略号*/
+.word {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.words2 {
+	display: -webkit-box;
+	display: box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+/*多行文本省略号*/
+.words3 {
+	display: -webkit-box;
+	display: box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+}
+
+/*垂直居中,容器设置宽高*/
+.ycenter {
+	align-items: center;
+	display: -webkit-flex;
+}
+/*水平居中,容器设置宽高*/
+.xcenter {
+	justify-content: center;
+	display: -webkit-flex;
+}
+
+/*box布局水平垂直居中*/
+.xycenterbox{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	-moz-box-align: center;
+	-webkit-box-align: center;
+	-moz-box-pack: center;
+	-webkit-box-pack: center;
+}
+/*box布局水平居中*/
+.xcenterbox{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	-moz-box-pack: center;
+	-webkit-box-pack: center;
+}
+/*box布局垂直居中*/
+.ycenterbox{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	-moz-box-align: center;
+	-webkit-box-align: center;
+}
+
+/*区域分割*/
+.line {
+	width: 100%;
+	height: 0.5rem;
+	background-color: rgb(245, 246, 248);
+}
+
+/*0.5px底边框*/
+.bottomLine{
+	background: -webkit-linear-gradient(top,transparent 40%,#ebebeb 60%) center bottom no-repeat;
+	background: -moz-linear-gradient(top, transparent 40%, #ebebeb 60%) center bottom no-repeat;
+	background: -ms-linear-gradient(top, transparent 40%, #ebebeb 60%) center bottom no-repeat;
+	background-size: 100% 1px;
+}
+.border1px:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200%;
+	height: 200%;
+	-webkit-transform: scale(0.5);
+	transform: scale(0.5);
+	-webkit-transform-origin: left top;
+	transform-origin: left top; 
+	box-sizing: border-box;
+	z-index: -1;
+	background: transparent;
+}
+
+/*设置隐藏*/
+.none {
+	display: none;
+}
+.hidden {
+	visibility: hidden;
+}
+
+/*加载更多动画*/
+.pullUp {
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	text-align: center;
+	color: #b3b3b3;
+}
+.pullUp .pullUpIcon {
+	display: inline-block;
+	vertical-align: top;
+	width: 16px;
+	height: 16px;
+	margin: 12px 9px 0 0;
+	background: url(http://img.learn.16q.cn/home/2/new/refresh.png) no-repeat;
+	background-size: contain;
+	-webkit-transform: rotate(0deg) translateZ(0);
+	-webkit-transition-duration: 0ms;
+	-webkit-animation-name: loading;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes loading {
+	from {
+		-webkit-transform: rotate(0deg) translateZ(0);
+	}
+	to {
+		-webkit-transform: rotate(360deg) translateZ(0);
+	}
+}
+
+/*footer*/
+.footer{
+	display:block;
+	width:100%;
+	height:1rem;
+	background: url(/res/weixin/img/footBg.png) center top no-repeat;
+	-o-background-size: 100% auto;
+    -ms-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto; 
+	position: fixed;
+	left:0;
+	bottom:0;
+	z-index: 999;
+} 
+.footer label{
+	display:block;
+	content: '';
+	width:.8rem;
+	height:.8rem;
+	background:url(/res/weixin/img/footIcon.png) center no-repeat;
+	-o-background-size: 100% auto;
+    -ms-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto; 
+    position: absolute;
+    left: 50%;
+    top: -.4rem;
+    margin-left: -.4rem;
+}
+.footer li{
+	width:25%;
+	height:100%;
+	float: left;
+	text-align: center;
+	font-size: .24rem;
+	padding-top: .12rem;
+}
+.footer li i{
+	display:block;
+	width:100%;
+	height:.48rem;
+}
+.footer li:nth-of-type(1) i{
+	background: url(/res/weixin/img/footIcon1.png) center no-repeat;
+	-o-background-size: .48rem auto;
+    -ms-background-size: .48rem auto;
+    -moz-background-size: .48rem auto;
+    -webkit-background-size: .48rem auto;
+    background-size: .48rem auto;
+}
+.footer li:nth-of-type(2) i{
+	background: url(/res/weixin/img/footIcon2.png) center no-repeat;
+	-o-background-size: .48rem auto;
+    -ms-background-size: .48rem auto;
+    -moz-background-size: .48rem auto;
+    -webkit-background-size: .48rem auto;
+    background-size: .48rem auto;
+}
+.footer li:nth-of-type(3) i{
+	background: url(/res/weixin/img/footIcon3.png) center no-repeat;
+	-o-background-size: .48rem auto;
+    -ms-background-size: .48rem auto;
+    -moz-background-size: .48rem auto;
+    -webkit-background-size: .48rem auto;
+    background-size: .48rem auto;
+}
+.footer li:nth-of-type(4) i{
+	background: url(/res/weixin/img/footIcon4.png) center no-repeat;
+	-o-background-size: .48rem auto;
+    -ms-background-size: .48rem auto;
+    -moz-background-size: .48rem auto;
+    -webkit-background-size: .48rem auto;
+    background-size: .48rem auto;
+}
+.footer li.on:nth-of-type(1) i{
+	background: url(/res/weixin/img/footIcon1_on.png) center no-repeat;
+	-o-background-size: .48rem auto;
+    -ms-background-size: .48rem auto;
+    -moz-background-size: .48rem auto;
+    -webkit-background-size: .48rem auto;
+    background-size: .48rem auto;
+}
+.footer li.on:nth-of-type(2) i{
+	background: url(/res/weixin/img/footIcon2_on.png) center no-repeat;
+	-o-background-size: .48rem auto;
+    -ms-background-size: .48rem auto;
+    -moz-background-size: .48rem auto;
+    -webkit-background-size: .48rem auto;
+    background-size: .48rem auto;
+}
+.footer li.on:nth-of-type(3) i{
+	background: url(/res/weixin/img/footIcon3_on.png) center no-repeat;
+	-o-background-size: .48rem auto;
+    -ms-background-size: .48rem auto;
+    -moz-background-size: .48rem auto;
+    -webkit-background-size: .48rem auto;
+    background-size: .48rem auto;
+}
+.footer li.on:nth-of-type(4) i{
+	background: url(/res/weixin/img/footIcon4_on.png) center no-repeat;
+	-o-background-size: .48rem auto;
+    -ms-background-size: .48rem auto;
+    -moz-background-size: .48rem auto;
+    -webkit-background-size: .48rem auto;
+    background-size: .48rem auto;
+}
+.footer li p{
+	line-height: .36rem; 
+	color:#888;
+}
+
+/*媒体查询*/
+@media screen and (max-width:239px) {html {	font-size: 28.4px;}}
+@media screen and (min-width:240px) and (max-width:319px) {	html {	font-size: 32px;}}
+@media screen and (min-width:320px) and (max-width:359px) {	html {	font-size: 42.67px;}}
+@media screen and (min-width:360px) and (max-width:374px) {	html {	font-size: 48px;}}
+@media screen and (min-width:375px) and (max-width:413px) {	html {	font-size: 50px;}}
+@media screen and (min-width:414px) and (max-width:422px) {	html {	font-size: 55.2px;}}
+@media screen and (min-width:423px) and (max-width:479px) {	html {	font-size: 56.4px;}}
+@media screen and (min-width:480px) and (max-width:539px) {	html {	font-size: 64px;}}
+@media screen and (min-width:540px) and (max-width:639px) {	html {	font-size: 72px;}}
+@media screen and (min-width:640px) and (max-width:719px) {	html {	font-size: 85.33px;}}
+@media screen and (min-width:720px){	html {	font-size: 96px;}}
+@media only screen and (min-width: 768px) {	.wrap {		width: 768px; margin: 0 auto;	}}
