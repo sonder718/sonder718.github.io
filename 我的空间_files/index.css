@@ -144,11 +144,11 @@ h2.tit .moreBtn{
 	border-radius: .1rem;
 }
 .doubleBox .item:nth-of-type(1){
-	background:url(/res/weixin/img/img1.png) center/cover no-repeat;
+	background:url(img1.png) center/cover no-repeat;
 	margin-right: .32rem;
 }
 .doubleBox .item:nth-of-type(2){
-	background:url(/res/weixin/img/img2.png) center/cover no-repeat;
+	background:url(img2.png) center/cover no-repeat;
 }
 .doubleBox .item span{
 	display:inline-block;
@@ -206,7 +206,7 @@ h2.tit .moreBtn{
 	font-size: .24rem;
 	color: #333;
 	padding:.2rem .3rem .2rem 0;
-	background: url(/res/weixin/img/arrowFr.png) right center no-repeat;
+	background: url(arrowFr.png) right center no-repeat;
 	-o-background-size: .16rem auto;
 	-ms-background-size: .16rem auto;
 	-moz-background-size: .16rem auto;
@@ -276,8 +276,8 @@ h2.tit .moreBtn{
 /*font*/
 @font-face{
 	font-family: 'fontName';
-	src:url(/res/weixin/img/yousebht.eot);
-	src:local('fontName'),local('yousebht'),url(/res/weixin/img/yousebht.woff)format("woff"),url(/res/weixin/img/yousebht.ttf)format('truetype'),url(/res/weixin/img/yousebht.svg#yousebht)format('svg');
+	src:url(yousebht.eot);
+	src:local('fontName'),local('yousebht'),url(yousebht.woff)format("woff"),url(yousebht.ttf)format('truetype'),url(yousebht.svg#yousebht)format('svg');
 }
 h2.tit{
 	font-weight: normal;
@@ -295,7 +295,7 @@ h2.tit{
 	box-shadow: 0 .08rem .24rem rgba(99,188,254,.16);
 }
 .doubleBox .item:nth-of-type(1){
-	background:url(/res/weixin/img/dbIcon.png) right .06rem bottom no-repeat;
+	background:url(dbIcon.png) right .06rem bottom no-repeat;
 	-o-background-size:1.9rem auto;
 	-ms-background-size:1.9rem auto;
 	-moz-background-size:1.9rem auto;
@@ -303,7 +303,7 @@ h2.tit{
 	background-size:1.9rem auto;
 }
 .doubleBox .item:nth-of-type(2){
-	background:url(/res/weixin/img/spIcon.png) right .08rem bottom no-repeat;
+	background:url(spIcon.png) right .08rem bottom no-repeat;
 	-o-background-size:1.74rem auto;
 	-ms-background-size:1.74rem auto;
 	-moz-background-size:1.74rem auto;
@@ -361,7 +361,7 @@ h2.tit{
     margin-right: .44rem;
 }
 .overwiew li:nth-of-type(1) { 
-	background:url(/res/weixin/img/xygkIcon1.png) right center no-repeat;
+	background:url(xygkIcon1.png) right center no-repeat;
 	-o-background-size: auto 1.12rem;
 	-ms-background-size: auto 1.12rem;
 	-moz-background-size: auto 1.12rem;
@@ -369,7 +369,7 @@ h2.tit{
 	background-size: auto 1.12rem;
 }
 .overwiew li:nth-of-type(2) { 
-	background:url(/res/weixin/img/xygkIcon2.png) right center no-repeat;
+	background:url(xygkIcon2.png) right center no-repeat;
 	-o-background-size: auto 1.12rem;
 	-ms-background-size: auto 1.12rem;
 	-moz-background-size: auto 1.12rem;
@@ -377,7 +377,7 @@ h2.tit{
 	background-size: auto 1.12rem;
 }
 .overwiew li:nth-of-type(3) { 
-	background:url(/res/weixin/img/xygkIcon3.png) right center no-repeat;
+	background:url(xygkIcon3.png) right center no-repeat;
 	-o-background-size: auto 1.12rem;
 	-ms-background-size: auto 1.12rem;
 	-moz-background-size: auto 1.12rem;
@@ -385,7 +385,7 @@ h2.tit{
 	background-size: auto 1.12rem;
 }
 .overwiew li:nth-of-type(4) { 
-	background:url(/res/weixin/img/xygkIcon4.png) right center no-repeat;
+	background:url(xygkIcon4.png) right center no-repeat;
 	-o-background-size: auto 1.12rem;
 	-ms-background-size: auto 1.12rem;
 	-moz-background-size: auto 1.12rem;

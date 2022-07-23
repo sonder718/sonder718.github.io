@@ -273,7 +273,7 @@ hr {
 	display:block;
 	width:100%;
 	height:1rem;
-	background: url(/res/weixin/img/footBg.png) center top no-repeat;
+	background: url(footBg.png) center top no-repeat;
 	-o-background-size: 100% auto;
     -ms-background-size: 100% auto;
     -moz-background-size: 100% auto;
@@ -289,7 +289,7 @@ hr {
 	content: '';
 	width:.8rem;
 	height:.8rem;
-	background:url(/res/weixin/img/footIcon.png) center no-repeat;
+	background:url(footIcon.png) center no-repeat;
 	-o-background-size: 100% auto;
     -ms-background-size: 100% auto;
     -moz-background-size: 100% auto;
@@ -314,7 +314,7 @@ hr {
 	height:.48rem;
 }
 .footer li:nth-of-type(1) i{
-	background: url(/res/weixin/img/footIcon1.png) center no-repeat;
+	background: url(footIcon1.png) center no-repeat;
 	-o-background-size: .48rem auto;
     -ms-background-size: .48rem auto;
     -moz-background-size: .48rem auto;
@@ -322,7 +322,7 @@ hr {
     background-size: .48rem auto;
 }
 .footer li:nth-of-type(2) i{
-	background: url(/res/weixin/img/footIcon2.png) center no-repeat;
+	background: url(footIcon2.png) center no-repeat;
 	-o-background-size: .48rem auto;
     -ms-background-size: .48rem auto;
     -moz-background-size: .48rem auto;
@@ -330,7 +330,7 @@ hr {
     background-size: .48rem auto;
 }
 .footer li:nth-of-type(3) i{
-	background: url(/res/weixin/img/footIcon3.png) center no-repeat;
+	background: url(footIcon3.png) center no-repeat;
 	-o-background-size: .48rem auto;
     -ms-background-size: .48rem auto;
     -moz-background-size: .48rem auto;
@@ -338,7 +338,7 @@ hr {
     background-size: .48rem auto;
 }
 .footer li:nth-of-type(4) i{
-	background: url(/res/weixin/img/footIcon4.png) center no-repeat;
+	background: url(footIcon4.png) center no-repeat;
 	-o-background-size: .48rem auto;
     -ms-background-size: .48rem auto;
     -moz-background-size: .48rem auto;
@@ -346,7 +346,7 @@ hr {
     background-size: .48rem auto;
 }
 .footer li.on:nth-of-type(1) i{
-	background: url(/res/weixin/img/footIcon1_on.png) center no-repeat;
+	background: url(footIcon1_on.png) center no-repeat;
 	-o-background-size: .48rem auto;
     -ms-background-size: .48rem auto;
     -moz-background-size: .48rem auto;
@@ -354,7 +354,7 @@ hr {
     background-size: .48rem auto;
 }
 .footer li.on:nth-of-type(2) i{
-	background: url(/res/weixin/img/footIcon2_on.png) center no-repeat;
+	background: url(footIcon2_on.png) center no-repeat;
 	-o-background-size: .48rem auto;
     -ms-background-size: .48rem auto;
     -moz-background-size: .48rem auto;
@@ -362,7 +362,7 @@ hr {
     background-size: .48rem auto;
 }
 .footer li.on:nth-of-type(3) i{
-	background: url(/res/weixin/img/footIcon3_on.png) center no-repeat;
+	background: url(footIcon3_on.png) center no-repeat;
 	-o-background-size: .48rem auto;
     -ms-background-size: .48rem auto;
     -moz-background-size: .48rem auto;
@@ -370,7 +370,7 @@ hr {
     background-size: .48rem auto;
 }
 .footer li.on:nth-of-type(4) i{
-	background: url(/res/weixin/img/footIcon4_on.png) center no-repeat;
+	background: url(footIcon4_on.png) center no-repeat;
 	-o-background-size: .48rem auto;
     -ms-background-size: .48rem auto;
     -moz-background-size: .48rem auto;

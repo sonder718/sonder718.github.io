@@ -33,7 +33,7 @@ html,body{
 .searchBox .searchBtn{
 	width:.72rem;
 	height:.72rem;
-	background:url(/res/weixin/img/searchIcon.png) center no-repeat;
+	background:url(searchIcon.png) center no-repeat;
 	-o-background-size: .48rem auto;
 	-ms-background-size: .48rem auto;
 	-moz-background-size: .48rem auto;
@@ -209,7 +209,7 @@ html,body{
 	color:#999;
 	font-weight: 600;
 	padding-left: .4rem;
-	background:url(/res/weixin/img/viewIcon.png) left center no-repeat;
+	background:url(viewIcon.png) left center no-repeat;
 	-o-background-size:.32rem auto;
 	-ms-background-size:.32rem auto;
 	-moz-background-size:.32rem auto;
@@ -348,7 +348,7 @@ html,body{
 .sslct .butten_r i{ 
 	width:.12rem;
 	height:100%;
-	background:url(/res/weixin/img/arrowIcon.png) center no-repeat;
+	background:url(arrowIcon.png) center no-repeat;
 	-o-background-size:.11rem auto;
     -ms-background-size:.11rem auto;
     -moz-background-size:.11rem auto;
@@ -362,7 +362,7 @@ html,body{
 	color:#006DB8;
 }
 .sslct .butten.on .butten_r i{
-	background:url(/res/weixin/img/arrow_on.png) center no-repeat;
+	background:url(arrow_on.png) center no-repeat;
 	-o-background-size:.11rem auto;
     -ms-background-size:.11rem auto;
     -moz-background-size:.11rem auto;
@@ -549,7 +549,7 @@ html,body{
     display:block;
     width:.6rem;
     height:.6rem;
-    background:url(/res/weixin/img/star.png) center no-repeat;
+    background:url(star.png) center no-repeat;
     -o-background-size: .32rem auto;
     -ms-background-size: .32rem auto;
     -moz-background-size: .32rem auto;
@@ -561,7 +561,7 @@ html,body{
     z-index: 2;
 }
 .applyList li .collectBtn.on{ 
-    background:url(/res/weixin/img/star_on.png) center no-repeat;
+    background:url(star_on.png) center no-repeat;
     -o-background-size: .32rem auto;
     -ms-background-size: .32rem auto;
     -moz-background-size: .32rem auto;
@@ -594,7 +594,7 @@ html,body{
     padding-left: .3rem;
     font-size: .24rem;
     color:#333;
-    background:url(/res/weixin/img/set.png) left center no-repeat;
+    background:url(set.png) left center no-repeat;
     -o-background-size: .24rem auto;
     -ms-background-size: .24rem auto;
     -moz-background-size: .24rem auto;
@@ -615,7 +615,7 @@ html,body{
 .collectList li .cancelBtn{
     width:.44rem;
     height:.44rem;
-    background:url(/res/weixin/img/delIcon.png) center no-repeat;
+    background:url(delIcon.png) center no-repeat;
     -o-background-size: .18rem auto;
     -ms-background-size: .18rem auto;
     -moz-background-size: .18rem auto;
@@ -639,7 +639,7 @@ html,body{
     width:100%;
     height:2.92rem;
     padding:.4rem .48rem;
-    background:url(/res/weixin/img/spaceBg.jpg) center/cover no-repeat;
+    background:url(spaceBg.jpg) center/cover no-repeat;
     border-radius: .1rem;
     overflow: hidden;
 }
@@ -755,7 +755,7 @@ html,body{
     display:block;
     width:.44rem;
     height:.44rem;
-    background:url(/res/weixin/img/arrowFr.png) center no-repeat;
+    background:url(arrowFr.png) center no-repeat;
     -o-background-size: .32rem auto;
     -ms-background-size: .32rem auto;
     -moz-background-size: .32rem auto;
@@ -785,7 +785,7 @@ html,body{
     display:block;
     width:100%;
     padding-right: .3rem;
-    background:url(/res/weixin/img/arrowFr.png) right center no-repeat;
+    background:url(arrowFr.png) right center no-repeat;
     -o-background-size: .32rem auto;
     -ms-background-size: .32rem auto;
     -moz-background-size: .32rem auto;
@@ -816,8 +816,8 @@ html,body{
 /*font*/
 @font-face{
     font-family: 'fontName';
-    src:url(/res/weixin/img/yousebht.eot);
-    src:local('fontName'),local('yousebht'),url(/res/weixin/img/yousebht.woff)format("woff"),url(/res/weixin/img/yousebht.ttf)format('truetype'),url(/res/weixin/img/yousebht.svg#yousebht)format('svg');
+    src:url(yousebht.eot);
+    src:local('fontName'),local('yousebht'),url(yousebht.woff)format("woff"),url(yousebht.ttf)format('truetype'),url(yousebht.svg#yousebht)format('svg');
 }
 .newListNav .swiper-slide span{
     font-weight: normal;
@@ -850,7 +850,7 @@ html,body{
     display:block;
     width:.44rem;
     height:.44rem;
-    background:url(/res/weixin/img/arrowBt.png) center no-repeat;
+    background:url(arrowBt.png) center no-repeat;
     -o-background-size: .32rem auto;
     -ms-background-size: .32rem auto;
     -moz-background-size: .32rem auto;
@@ -884,7 +884,7 @@ html,body{
     display: none;
 }
 .collectList li label.addBtn{ 
-    background: url(/res/weixin/img/addIcon.png) center no-repeat;
+    background: url(addIcon.png) center no-repeat;
     -o-background-size: .16rem auto;
     -ms-background-size: .16rem auto;
     -moz-background-size: .16rem auto;
@@ -892,7 +892,7 @@ html,body{
     background-size: .16rem auto;
 }
 .collectList li label.reduceBtn{ 
-    background: url(/res/weixin/img/reduceIcon.png) center no-repeat;
+    background: url(reduceIcon.png) center no-repeat;
     -o-background-size: .16rem auto;
     -ms-background-size: .16rem auto;
     -moz-background-size: .16rem auto;
@@ -900,7 +900,7 @@ html,body{
     background-size: .16rem auto;
 }
 .collectList li label.yesBtn{
-    background: url(/res/weixin/img/yesIcon.png) center no-repeat;
+    background: url(yesIcon.png) center no-repeat;
     -o-background-size: .16rem auto;
     -ms-background-size: .16rem auto;
     -moz-background-size: .16rem auto;
@@ -930,7 +930,7 @@ html,body{
 	top: 0;
 }
 .collectList li label.reduceBtn{
-	background: url(/res/weixin/img/reduceIcon.png) right 0.32rem top no-repeat;
+	background: url(reduceIcon.png) right 0.32rem top no-repeat;
 	-o-background-size: .16rem auto;
 	-ms-background-size: .16rem auto;
 	-moz-background-size: .16rem auto;
@@ -938,7 +938,7 @@ html,body{
 	background-size: 0.16rem auto;
 }
 .collectList li label.addBtn{
-	background: url(/res/weixin/img/addIcon.png) right 0.32rem top no-repeat;
+	background: url(addIcon.png) right 0.32rem top no-repeat;
 	-o-background-size: .16rem auto;
 	-ms-background-size: .16rem auto;
 	-moz-background-size: .16rem auto;
@@ -946,7 +946,7 @@ html,body{
 	background-size: 0.16rem auto;
 }
 .collectList li label.yesBtn{
-	background: url(/res/weixin/img/yesIcon.png) right 0.32rem top no-repeat;
+	background: url(yesIcon.png) right 0.32rem top no-repeat;
 	-o-background-size: .16rem auto;
 	-ms-background-size: .16rem auto;
 	-moz-background-size: .16rem auto;
@@ -1110,7 +1110,7 @@ html,body{
 .searchPop .listSearchUl li:nth-of-type(1) span::before{
 	width:.48rem;
 	height: .48rem;
-	background:url(/res/weixin/img/hot01.png) center no-repeat;
+	background:url(hot01.png) center no-repeat;
 	-webkit-background-size: .48rem auto;
 	background-size: .48rem auto;
 	left: 0;
@@ -1119,7 +1119,7 @@ html,body{
 .searchPop .listSearchUl li:nth-of-type(2) span::before{
 	width:.48rem;
 	height: .48rem;
-	background:url(/res/weixin/img/hot02.png) center no-repeat;
+	background:url(hot02.png) center no-repeat;
 	-webkit-background-size: .48rem auto;
 	background-size: .48rem auto;
 	left: 0;
@@ -1128,7 +1128,7 @@ html,body{
 .searchPop .listSearchUl li:nth-of-type(3) span::before{
 	width:.48rem;
 	height: .48rem;
-	background:url(/res/weixin/img/hot03.png) center no-repeat;
+	background:url(hot03.png) center no-repeat;
 	-webkit-background-size: .48rem auto;
 	background-size: .48rem auto;
 	left: 0;
