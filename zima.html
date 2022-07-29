@@ -20,31 +20,11 @@
     <link rel="stylesheet" href="skin_old.css" />
     <link rel="stylesheet" href="style.min_old.css" />
     <link rel="stylesheet" href="cropper.min.css" />
-    <link rel="stylesheet" href="iconfont.css" />
-
-    <!-- <script src="jweixin-1.2.0.js"></script>
-    <script src="require.js"></script>
-    <script src="mobutil.js"></script>
-    <script src="spriteFrame.js"></script>
-    <script src="http://rsres.cug.edu.cn/bower_components/qrcode.js/qrcode.js"></script>
-    <script src="bh_utils_mobile.js"></script>
-    <script src="i18nUtil.js"></script> -->
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&amp;family=Roboto:wght@400;500;700&amp;display=swap"
-      rel="stylesheet"
-    />
-    <input type="hidden" id="_w_tusk" />
     <style>
-      #today 
-      {
-   }
-   #today1 
-      {
-   } 
-   #today2 
-      {
-   }
+      #today {
+           color: rgb(255, 153, 24);
+       }
+
       #time {
            color: rgb(255, 153, 24);
        }
@@ -53,10 +33,9 @@
        window.onload = function() {
            //当前年月日ID
            //倒计时ID
-           var today = document.getElementById("today");
-           var today1 = document.getElementById("today1");
-           var today2 = document.getElementById("today2");
-    
+           var time = document.getElementById("time");
+          //  var today = document.getElementById("today");
+
            //问候语ID
            //获取现在的年月日小时
            var fullTime = new Date();
@@ -83,13 +62,14 @@
                m < 10 ? m = "0" + m : m;
                h < 10 ? h = "0" + h : h;
                //d<10? d="0"+d:d;
-               today.innerHTML = year+"-"+month+'-'+date;
-               today1.innerHTML = year+"-"+month+'-'+date+" 6:00";
-               today2.innerHTML = year+"-"+month+'-'+date+" 23:59";
+               time.innerHTML = "距离返回时间还剩：" +
+                   "0天  " +
+                   h + ":" + m + ":" + s;
+              //  today.innerHTML = year+"-"+month+'-'+date;
 
            }
        }
-    </script>
+   </script>
     <style type="text/css">
       /*!
      * Cropper.js v1.5.9
@@ -933,32 +913,57 @@
   <body>
     <div id="app">
       <div class="mint-layout-container fxyq_fxsq fxyq_wcsq">
+        <div class="mint-layout-container cant-wcsq" style="display: none">
+          <div>
+            <img alt="" src="none.png" style="width: 200px" />
+            <div style="margin-top: 10px">您已毕业离校!</div>
+          </div>
+        </div>
+        <div class="mint-layout-container cant-wcsq" style="display: none">
+          <div>
+            <img
+              alt=""
+              src="iconkong.png"
+              style="width: 200px"
+            />
+            <div style="margin-top: 10px">当前无法进行外出申请!</div>
+            <div
+              style="
+                margin-top: 6px;
+                font-size: 14px;
+                color: rgb(195, 190, 190);
+              "
+            >
+              当前未返校或不符合外出申请条件
+            </div>
+          </div>
+        </div>
         <div class="mint-layout-container" style="">
           <div class="mint-layout-container pjwvpma57">
             <div class="mint-navbar mt-bg-lv3 mt-bColor-grey-lv4">
-              <a
-                class="mint-tab-item mt-color-grey-lv4"
-                componentname="navbar"
-                href="zima.html"
-                style="min-width: 0px"
-                ><div class="mint-tab-item-icon"><!----><!----></div>
-                <div class="mint-tab-item-label mt-color-grey-lv2">
-                  外出申请
-                </div>
-                <!----></a
-              >
               <a
                 class="mint-tab-item is-selected mt-bColor-theme"
                 componentname="navbar"
                 style="min-width: 0px"
                 ><div class="mint-tab-item-icon"><!----><!----></div>
-                <div class="mint-tab-item-label mt-color-theme">外出记录</div>
+                <div class="mint-tab-item-label mt-color-theme">外出申请</div>
+                <!----></a
+              >
+              <a
+                class="mint-tab-item mt-color-grey-lv4"
+                componentname="navbar"
+                href="try2.html"
+                style="min-width: 0px"
+                ><div class="mint-tab-item-icon"><!----><!----></div>
+                <div class="mint-tab-item-label mt-color-grey-lv2">
+                  外出记录
+                </div>
                 <!----></a
               >
             </div>
             <div class="mint-tab-container">
               <div class="mint-tab-container-wrap">
-                <div class="mint-tab-container-item" style="display: none">
+                <div class="mint-tab-container-item" style="">
                   <div class="wcsq-tab-content" style="display: none">
                     <div class="wcsq-warning-area" style="display: none">
                       申请已退回，退回原因：
@@ -8378,7 +8383,7 @@
                       </div>
                       <div class="xsxx">
                         <div>张一卓&nbsp;&nbsp;20191001361</div>
-                        <div>计算机学院/19C194</div>
+                        <div>计算机学院/19C191</div>
                       </div>
                     </div>
                     <!---->
@@ -8421,23 +8426,28 @@
                         class="wcsq-ld-text"
                         style="color: rgb(255, 153, 24)"
                       >
-                        已超时，二维码失效
+                      <nobr id="time"></nobr>
+                      <!-- <nobr id="today"></nobr> -->
                       </div>
+
                     </div>
                     <div class="wcsq-ewm-content">
                       <div
                         id="wcsq_school_code"
                         title="081c2a8d59a94f53b1b719f19a21351c_3#1"
-                        style="margin: 10px"
+                        style="margin:10px"
                       >
                         <canvas
                           width="150"
                           height="150"
                           style="display: none"
-                        ></canvas
-                        ><img
+                        >
+                        </canvas>
+                        <img
                           alt="Scan me!"
-                          src="data:image/png;base64,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"
+                          src="QRcode.png"
+                          width="150"
+                          height="150"
                           style="display: block"
                         />
                       </div>
@@ -8445,17 +8455,6 @@
                     <div class="wcsq-ewm-tip">
                       请向校方检查人员出示二维码，扫码进出校～
                     </div>
-                    <button
-                      class="
-                        mint-button
-                        fxyq_fxsq_btn
-                        mt-btn-default
-                        mint-button--normal
-                      "
-                      style="margin-top: 50px"
-                    >
-                      <!---->重新申请
-                    </button>
                   </div>
                   <div
                     class="wcsq-tab-content"
@@ -8512,7 +8511,7 @@
                     </button>
                   </div>
                 </div>
-                <div class="mint-tab-container-item" style="">
+                <div class="mint-tab-container-item" style="display: none">
                   <div
                     class="mint-layout-container pk1itqqpj pk6sm8biv"
                     style=""
@@ -8539,7 +8538,7 @@
                               <div
                                 class="mint-text OPk1iu6ki6 mt-color-default"
                               >
-                              <nobr id="today"></nobr>
+                                2021-09-23
                               </div>
                             </div>
                             <div
@@ -8558,7 +8557,7 @@
                               <div
                                 class="mint-text OPk1iu6kiie mt-color-default"
                               >
-                              <nobr id="today1"></nobr>                      
+                                2021-09-23 10:37
                               </div>
                             </div>
                             <div
@@ -8577,7 +8576,7 @@
                               <div
                                 class="mint-text OPk1iu6kiie mt-color-default"
                               >
-                              <nobr id="today2"></nobr>                      
+                                2021-09-23 23:39
                               </div>
                             </div>
                             <div
@@ -8634,7 +8633,7 @@
                               <div
                                 class="mint-text OPk1iu6kiie mt-color-default"
                               >
-                                中国地质大学
+                                街道口宝岛眼镜
                               </div>
                             </div>
                           </div>
@@ -9081,7 +9080,7 @@
                               <div
                                 class="mint-text OPk1iu6kiie mt-color-default"
                               >
-                                中国地质大学
+                                新世界百货
                               </div>
                             </div>
                           </div>
@@ -9310,6 +9309,30 @@
           </div>
         </div>
       </div>
+      <!---->
+      <div id="xsfw_yypjDiv" class="xsfwpjmob-nav" style="display: none">
+        <div class="xsfwpjmob-nav-icon">
+          <img src="../../swpubapp/public/images/pingjia.png" />
+        </div>
+      </div>
+    </div>
+
+    <div class="mint-indicator" style="display: none">
+      <div class="mint-indicator-wrapper" style="padding: 15px">
+        <span class="mint-indicator-spin"
+          ><div
+            class="mint-spinner-snake"
+            style="
+              border-top-color: rgb(214, 214, 214);
+              border-left-color: rgb(214, 214, 214);
+              border-bottom-color: rgb(214, 214, 214);
+              height: 32px;
+              width: 32px;
+            "
+          ></div></span
+        ><span class="mint-indicator-text" style="display: none"></span>
+      </div>
+      <div class="mint-indicator-mask"></div>
     </div>
   </body>
 </html>
