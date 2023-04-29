@@ -137,12 +137,7 @@ class hybrid_block(nn.Module):
                                       nn.Conv1d(2*channel, channel, kernel_size=1))
         self.confidence_filter_self=PointCN(2*channel,1)
         
-        self.attention_block_cross = attention_propagantion(channel, head)
-        self.attention_block_down_cross = attention_propagantion(channel, head)
-        self.attention_block_up_cross = attention_propagantion(channel, head)
-        self.cat_filter_cross=nn.Sequential(nn.Conv1d(2*channel,2*channel, kernel_size=1), nn.SyncBatchNorm(2*channel), nn.ReLU(),
-                                      nn.Conv1d(2*channel, channel, kernel_size=1))
-        self.confidence_filter_cross=PointCN(2*channel,1)
+      
 
         
     def forward(self,desc1,desc2,seed_index1,seed_index2):
@@ -166,23 +161,7 @@ class hybrid_block(nn.Module):
         #mlp降维生成新的desc
         desc1,desc2=desc1+self.cat_filter_self(torch.cat([desc1_all,desc1_orth],dim=1)),desc2+self.cat_filter_self(torch.cat([desc2_all,desc2_orth],dim=1))
     
-    #cross-attention
-        cluster1, cluster2 = desc1.gather(dim=-1, index=seed_index1.unsqueeze(1).expand(-1, self.channel, -1)), \
-                             desc2.gather(dim=-1, index=seed_index2.unsqueeze(1).expand(-1, self.channel, -1))
-        #所有点进行互注意力聚合
-        desc1_all, desc2_all = self.attention_block_cross(desc1, desc2), self.attention_block_cross(desc2, desc1)
-        #种子点和非种子点进行自注意力聚合
-        #从另一图的所有点更新种子点
-        cluster1, cluster2 = self.attention_block_down_cross(cluster1, desc2), self.attention_block_down_cross(cluster2, desc1)
-        #从另一图的种子点更新所有点
-        seed_weight=self.confidence_filter_cross(torch.cat([cluster1,cluster2],dim=1))
-        seed_weight=torch.sigmoid(seed_weight).squeeze(1)
-        desc1_seed,desc2_seed=self.attention_block_up_cross(desc1,cluster2,seed_weight),self.attention_block_up_cross(desc2,cluster1,seed_weight)
-        #正交化
-        desc1_orth,desc2_orth=cal_orth(desc1_all,desc1_seed),cal_orth(desc2_all,desc2_seed)
-        #mlp降维生成新的desc
-        desc1,desc2=desc1+self.cat_filter_cross(torch.cat([desc1_all,desc1_orth],dim=1)),desc2+self.cat_filter_cross(torch.cat([desc2_all,desc2_orth],dim=1))
-       
+   
         return desc1,desc2,seed_weight
 
 
